@@ -1,0 +1,20 @@
+# Ignore Python bytecode files
+*.pyc
+__pycache__
+
+# Ignore development and system files
+.dockerignore
+.git
+.gitignore
+.vscode
+*.log
+*.swp
+
+# Ignore IDE-specific files
+.idea
+*.iml
+
+# Ignore project-specific files or directories you don't want in the Docker image
+venv
+*.env
+*.ini
