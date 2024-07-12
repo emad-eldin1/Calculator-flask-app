@@ -1,0 +1,17 @@
+# Python
+*.pyc
+__pycache__/
+venv/
+.env
+
+# IDEs and Editors
+.vscode/
+.idea/
+
+# System and environment files
+*.log
+*.swp
+.DS_Store
+
+# Dependency directories
+node_modules/
