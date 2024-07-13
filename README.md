@@ -41,13 +41,13 @@ pip install -r requirements.txt
 ```
 3. Run the Application:
 ```
-python app.py
+python3 app.py
 ```
-### The application should now be accessible at http://localhost:5000 in your web browser.
+### The application should now be accessible at http://localhost:8000 in your web browser.
 
 ## Running Tests
 ```
-python -m unittest test_app.py
+python3 -m unittest test_app.py
 ```
 
 -----
