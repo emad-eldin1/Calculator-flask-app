@@ -71,4 +71,17 @@ docker login
 ```
 docker push emadeldin1/calculator-flask:latest 
 ```
+---------------------
+## Github Action Steps
+
+#### Step 1: Update your Requirements :
+```
+pip freeze > requirements.txt```
+#### Step 2: push to github
+```
+git add .
+git commit -m ""
+git push origin main
+```
+
 
