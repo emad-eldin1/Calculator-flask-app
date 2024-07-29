@@ -76,7 +76,8 @@ docker push emadeldin1/calculator-flask:latest
 
 #### Step 1: Update your Requirements :
 ```
-pip freeze > requirements.txt```
+pip freeze > requirements.txt
+```
 #### Step 2: push to github
 ```
 git add .
