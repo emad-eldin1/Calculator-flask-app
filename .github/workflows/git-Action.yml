@@ -18,7 +18,7 @@ jobs:
 
 
       - name: Running tests
-        uses: python3 -m unittest test_app.py
+        run: python3 -m unittest test_app.py
     
      
       - name: Log in to Docker Hub
