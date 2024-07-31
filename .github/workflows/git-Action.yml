@@ -28,4 +28,6 @@ jobs:
         with:
             # Required, playbook filepath
           playbook: ansible-playbook.yml
+
+          directory: /home/emadeldin/Emad-linux/Calculator-flask-app/ansible-playbook.yml
           
