@@ -33,4 +33,3 @@
       command: docker run -d -p 8000:8000 calculator-app
 
       
-      #don't forget to docker login to docker hub 
