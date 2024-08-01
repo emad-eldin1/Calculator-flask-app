@@ -1,5 +1,8 @@
 # Flask Calculator Web Application
 
+
+![example workflow](https://github.com/emad-eldin1/Caculator-flask-app/actions/workflows/git-Action.yml/badge.svg)
+
 This is a simple calculator web application built using Flask, Dockerized for easy deployment. The application allows you to perform basic arithmetic operations such as addition, subtraction, multiplication, and division.
 
 ## Prerequisites
