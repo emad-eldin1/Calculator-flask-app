@@ -76,6 +76,7 @@ docker login
 ```
 docker push emadeldin1/calculator-flask:latest 
 ```
+![alt text](image.png)
 ---------------------
 ## Run The application Using Ansible-playbook
 #### step 1: test the proccess before building
@@ -101,8 +102,8 @@ git add .
 git commit -m ""
 git push origin main
 ```
+## Successful workflow :<u>by running the github action the continuous integration proccess will be done
 
-
-----------
-
+![alt text](image-2.png)
 -----
+### 
