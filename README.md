@@ -10,6 +10,7 @@ Before you begin, ensure you have the following installed on your machine:
 2. **Python 3.9**: To run the application and the tests locally 
 3. **Flask==2.1.2** 
 4. **Werkzeug==2.0.3**
+5. **Ansible** 
 
 ## Directory Structure
 
@@ -24,7 +25,10 @@ calculator/
 ├──.gitignore
 ├── venv
 ├── requirements.txt
+├──ansible-playbook.yml
 ├── test_app.py
+├──.github/workflows
+            └── git-action.yml
 └── templates/
     └── index.html
 ```
@@ -44,7 +48,7 @@ pip install -r requirements.txt
 python3 app.py
 ```
 ### The application should now be accessible at http://localhost:8000 in your web browser.
-
+![alt text](image-1.png)
 ## Running Tests
 ```
 python3 -m unittest test_app.py
@@ -56,6 +60,7 @@ python3 -m unittest test_app.py
 docker build -t calculator-app .
 docker run -p 8000:8000 calculator-app
 ```
+
 
 ## Push to Docker Hub:
 
@@ -72,6 +77,18 @@ docker login
 docker push emadeldin1/calculator-flask:latest 
 ```
 ---------------------
+## Run The application Using Ansible-playbook
+#### step 1: test the proccess before building
+```
+ansible-playbook ansible-playbook.yml --check
+```
+#### Run The application
+```
+ansible-playbook ansible-playbook.yml
+```
+---------
+
+
 ## Github Action Steps
 
 #### Step 1: Update your Requirements :
@@ -86,3 +103,6 @@ git push origin main
 ```
 
 
+----------
+
+-----

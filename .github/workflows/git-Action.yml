@@ -14,10 +14,11 @@ jobs:
         with:
           python-version: 3.12
           cache: 'pip'
+          
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
-          
+
       - name: Running tests
         run: python3 -m unittest test_app.py
        
