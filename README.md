@@ -73,7 +73,7 @@ python3 -m unittest test_app.py
 ```
 
 -----
-># For Running by using Dockerization :
+# For Running by using Dockerization :
 ## 1. Build & Run Docker Image:
 ```
 docker build -t calculator-app .
@@ -109,7 +109,7 @@ ansible-playbook ansible-playbook.yml
 ---------
 
 
-># Github Action Steps : 
+# Github Action Steps : 
 
 #### Step 1: Update your Requirements :
 ```
@@ -124,7 +124,7 @@ git push origin main
 ## Successful workflow :<i>by running the github action the continuous integration proccess will be done</i>
 ![alt text](images/image33.png)
 -----
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>--------
+----- 
 # Provisioning Three EC2 Instances on AWS Using Terraform :
 
 ### Step 1: Create a file named main.tf with the following content:
@@ -185,3 +185,8 @@ ansible-playbook -i hosts.ini <name of your ansible yaml file>
 ```
 ![alt text](images/ansibler-run.png)
 --------
+# for clone the repository : 
+```
+https://github.com/emad-eldin1/Calculator-flask-app.git
+```
+-------
