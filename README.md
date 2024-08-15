@@ -123,8 +123,7 @@ git push origin main
 ```
 ## Successful workflow :<i>by running the github action the continuous integration proccess will be done</i>
 ![alt text](images/image33.png)
------
------ 
+--
 # Provisioning Three EC2 Instances on AWS Using Terraform :
 
 ### Step 1: Create a file named main.tf with the following content:
