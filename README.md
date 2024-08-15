@@ -15,7 +15,7 @@ Before you begin, ensure you have the following installed on your machine:
 4. **Werkzeug==2.0.3**
 5. **Ansible** 
 6. **terraform**
-7. **AWS**
+7. **Cloud provider (AWS)**
 
 ## Directory Structure
 
