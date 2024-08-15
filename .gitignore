@@ -20,5 +20,6 @@ node_modules/
 *.tfvars
 *.tfstate
 *.backup
-
+*.terraform
+/terraform/.terraform/
 *.png 
