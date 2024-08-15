@@ -51,7 +51,7 @@ pip install -r requirements.txt
 python3 app.py
 ```
 ### The application should now be accessible at http://localhost:8000 in your web browser.
-![alt text](image-1.png)
+![alt text](images/image-1.png)
 ## Running Tests
 ```
 python3 -m unittest test_app.py
@@ -79,7 +79,7 @@ docker login
 ```
 docker push emadeldin1/calculator-flask:latest 
 ```
-![alt text](image.png)
+![alt text](images/image.png)
 ---------------------
 ## Run The application Using Ansible-playbook
 #### step 1: test the proccess before building
@@ -107,6 +107,6 @@ git push origin main
 ```
 ## Successful workflow :<u>by running the github action the continuous integration proccess will be done
 
-![alt text](image-2.png)
+![alt text](images/image-2.png)
 -----
 ### 

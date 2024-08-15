@@ -15,3 +15,10 @@ venv/
 
 # Dependency directories
 node_modules/
+
+*.pem
+*.tfvars
+*.tfstate
+*.backup
+
+*.png 
