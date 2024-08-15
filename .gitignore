@@ -23,3 +23,60 @@ node_modules/
 *.terraform
 /terraform/.terraform/
 *.png 
+
+
+
+# Terraform files
+*.tfstate
+*.tfstate.*
+*.tfvars
+.terraform/
+*.tfplan
+
+# Local development environment files
+.terraform.tfstate
+.terraform.tfstate.*
+.terraform/terraform.tfstate
+
+# Sensitive data
+*.tfvars
+terraform.tfvars
+*.tfvars.json
+*.tfvars.yaml
+
+# IDE or editor specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Terraform workspace-specific files
+terraform.tfstate.d/
+
+
+
+
+
+
+
+# Ansible files
+*.retry
+
+# SSH keys
+*.pem
+*.key
+
+# Local configuration files
+*.env
+*.local
+
+# Ansible Vault files
+*.vault
+
+# IDE or editor specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
