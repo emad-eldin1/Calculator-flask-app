@@ -22,7 +22,7 @@ node_modules/
 *.backup
 *.terraform
 /terraform/.terraform/
-*.png 
+
 
 
 
