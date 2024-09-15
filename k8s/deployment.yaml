@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: calculatorapp
+  namespace: calculatorapp-ns
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: calculatorapp
+  template:
+    metadata:
+      labels:
+        app: calculatorapp
+    spec:
+      containers:
+      - name: calculatorapp
+        image: emadeldin1/calculator-flask:latest
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 8000

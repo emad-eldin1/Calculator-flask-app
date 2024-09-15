@@ -16,6 +16,8 @@ Before you begin, ensure you have the following installed on your machine:
 5. **Ansible** 
 6. **terraform**
 7. **Cloud provider (AWS)**
+8. **Kubectl**
+9. **minikube** 
 
 ## Directory Structure
 
@@ -183,7 +185,75 @@ ansible_ssh_private_key_file=/path/to/your/private_key.pem
 ansible-playbook -i hosts.ini <name of your ansible yaml file>
 ```
 ![alt text](images/ansibler-run.png)
---------
+--------ّ
+# Kubernetes Deployment for Calculator App
+This project deploys a Calculator Application using Kubernetes. The deployment uses the following Kubernetes resources: Namespace, Deployment, Service, and Ingress. These resources are essential for managing and running the application within a Kubernetes cluster.
+
+### 1.Namespace : 
+  A Namespace is used to isolate and group resources in Kubernetes.
+
+### 2.Deployment : 
+A Deployment manages the lifecycle of pods, ensuring the correct number of replicas of the Calculator App are running. It also enables scaling, updating, and rolling back the application if needed.
+
+
+### 3.Service : 
+A Service in Kubernetes exposes the application internally to the cluster and externally if needed. 
+
+### 4.Ingress : 
+The Ingress resource manages external HTTP access to the Calculator App.
+
+## <u>Steps to Deploy and Run the Application Using Kubernetes : </u>
+
+### 1. Start Minikube
+```
+minikube start
+```
+![alt text](images/minikubestart.png)
+
+### 2. Navigate to the Kubernetes Directory 
+```
+cd k8s/
+```
+### 3. Apply Kubernetes Manifests 
+```
+kubectl apply -f namespace.yaml -f deployment.yaml -f service.yaml -f ingress.yaml
+```
+![alt text](images/apply-kube.png)
+### 4. Get Minikube IP
+```
+minikube ip
+```
+### 5. Access the Application By Generating link 
+```
+minikube service -n calculatorapp-ns calculatorapp --url
+```
+![alt text](images/link-kube.png)
+Alternatively, you can access the app via the ingress using http://```calculatorapp.local.``` For this, you'll need to update your ```/etc/hosts``` file to map the Minikube IP to the hostname ```calculatorapp.local```.
+```
+sudo nano /etc/hosts
+<minikube-ip> calculatorapp.local
+```
+
+## <u> Steps to Stop Minikube and Kubernetes Resources </u>
+
+### 1.To stop the Minikube cluster and halt all running Kubernetes resources:
+```
+minikube stop
+```
+![alt text](images/minikubestop.png)
+### 2.To delete the Kubernetes resources:
+```
+kubectl delete -f namespace.yaml -f deployment.yaml -f service.yaml -f ingress.yaml
+```
+![alt text](images/kubectldelete.png)
+
+
+
+
+
+
+---
+
 # for clone the repository : 
 ```
 https://github.com/emad-eldin1/Calculator-flask-app.git

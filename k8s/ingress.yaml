@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: calculatorapp-ingress
+  namespace: calculatorapp-ns  
+spec:
+  rules:
+  - host: calculatorapp.local
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: calculatorapp-svc
+            port:
+              number: 8000  
