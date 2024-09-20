@@ -1,0 +1,57 @@
+# https://github.com/grafana/loki/blob/main/production/docker-compose.yaml
+---
+x-common-config: &base_config
+  logging:
+    driver: json-file
+    options:
+      tag: "{{.Name}}"
+      max-size: "100m"
+      max-file: "3"
+  mem_limit: "512M"
+
+services:
+  app:
+    <<: *base_config
+    image: emadeldin1/calculator-flask:latest
+    container_name: app
+    ports:
+      - "8000:8000"
+
+  loki:
+    <<: *base_config
+    image: grafana/loki:latest
+    container_name: loki
+    ports:
+      - "3100:3100"
+    volumes:
+      - ./config:/mnt/config
+    command: -config.file=/mnt/config/loki-config.yaml
+
+  promtail:
+    <<: *base_config
+    image: grafana/promtail:latest
+    container_name: promtail
+    volumes:
+      - /var/lib/docker/containers:/var/lib/docker/containers  # Needed for container logs
+      - /var/log:/var/log
+      - ./config:/mnt/config
+    command: -config.file=/mnt/config/promtail-config.yaml
+
+  grafana:
+    <<: *base_config
+    image: grafana/grafana:latest
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./provisioning:/etc/grafana/provisioning
+
+  prometheus:
+    <<: *base_config
+    image: prom/prometheus:latest 
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./config:/mnt/config
+    command: --config.file=/mnt/config/prometheus-config.yaml
